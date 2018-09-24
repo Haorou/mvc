@@ -56,7 +56,7 @@ try
         {
             if($_GET["comment_id"] && $_GET["comment_id"] > 0)
             {
-                changeComment($_GET["comment_id"], $_POST["comment"]);
+                changeComment($_GET["comment_id"], $_POST["comment"], $_GET["post_id"]);
             }
         }
     }

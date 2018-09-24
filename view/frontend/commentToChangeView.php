@@ -4,7 +4,7 @@
 ?>
 
     <h1>Mon super blog !</h1>
-    <p><a href="index.php">Billet relatif</a></p>
+    <p><a href="index.php">Retour à la liste des billets</a></p>
 
     <div class="news">
         <h3>
@@ -17,7 +17,7 @@
 
     <h2>Commentaire à modifer</h2>
 
-    <form action="index.php?action=changeComment&amp;id=<?= $comment['id']?> &amp;" method="post">
+    <form action="index.php?action=changeComment&amp;comment_id=<?= $comment['id']?>&amp;post_id=<?=$post['id']?>" method="post">
         <div>
             <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?> 
         </div>
