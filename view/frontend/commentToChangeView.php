@@ -17,7 +17,7 @@
 
     <h2>Commentaire à modifer</h2>
 
-    <form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
+    <form action="index.php?action=changeComment&amp;id=<?= $comment['id']?> &amp;" method="post">
         <div>
             <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?> 
         </div>

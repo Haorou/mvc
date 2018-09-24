@@ -30,4 +30,14 @@ class CommentManager extends Manager
 
         return $affectedLines;
     }
+
+    public function modifyComment($postId, $commentContent)
+    {
+        $db = $this -> dbConnect();
+        $newComment = $db->prepare('UPDATE comments SET comment=:commentContent, comment_date = :comment_date WHERE id= :postId');
+        $newComment->execute(array(
+            "commentContent" => $commentContent,
+            "comment_date" => now(),
+            "id" => $postId));
+    }
 }

@@ -52,6 +52,13 @@ try
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
+        elseif($_GET["action"] == "changeComment")
+        {
+            if($_GET["comment_id"] && $_GET["comment_id"] > 0)
+            {
+                changeComment($_GET["comment_id"], $_POST["comment"]);
+            }
+        }
     }
     else 
     {

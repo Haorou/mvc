@@ -51,11 +51,11 @@ function displayCommentToChange($commentId, $postId)
     require('view/frontend/commentToChangeView.php');
 }
 
-function changeComment($postId)
+function changeComment($postId, $commentContent)
 {
     $commentManager = new \Haorou\Blog\Model\CommentManager();
 
-    $isCommentChange = $commentManager->modifyComment($postId);
+    $isCommentChange = $commentManager->modifyComment($postId,$commentContent);
 
     if($isCommentChange === false)
     {
